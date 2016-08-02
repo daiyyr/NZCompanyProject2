@@ -1,0 +1,14 @@
+14/01/2016 10:11:54 p.m.: System.UnauthorizedAccessException: 对路径“C:\Users\Brian\Desktop\Project\sapp_telco_v2_4\xml\invoice.xml”的访问被拒绝。
+   在 MyBiz.CreateProjectInvoice(String project_id, Boolean bill_contracts, Boolean bill_callrecords, Boolean bill_materials, Boolean bill_manhours, Boolean bill_datausage) 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\App_Code\MyBiz.cs:行号 378
+18/01/2016 10:02:44 a.m.: System.UnauthorizedAccessException: 对路径“C:\Users\Brian\Desktop\Project\sapp_telco_v2_4\xml\invoice.xml”的访问被拒绝。
+   在 MyBiz.CreateProjectInvoice(String project_id, Boolean bill_contracts, Boolean bill_callrecords, Boolean bill_materials, Boolean bill_manhours, Boolean bill_datausage) 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\App_Code\MyBiz.cs:行号 378
+18/01/2016 10:07:02 a.m.: System.FormatException: 该字符串未被识别为有效的 DateTime。有一个未知单词(从索引 0 处开始)。
+   在 MyFuncs.FormatDateStr(String date) 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\App_Code\MyFuncs.cs:行号 144
+   在 telco.callbatch.ImportThread.ImportData(String path) 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\callbatch.aspx.cs:行号 358Rows:3|START TRANSACTION
+18/01/2016 10:07:02 a.m.: System.FormatException: 该字符串未被识别为有效的 DateTime。有一个未知单词(从索引 0 处开始)。
+   在 telco.callbatch.ImportThread.ImportData(String path) 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\callbatch.aspx.cs:行号 438
+   在 telco.callbatch.ImportThread.ButtonImport_Click_Threading() 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\callbatch.aspx.cs:行号 251
+18/01/2016 10:08:54 a.m.: System.UnauthorizedAccessException: 对路径“C:\Users\Brian\Desktop\Project\sapp_telco_v2_4\xml\invoice.xml”的访问被拒绝。
+   在 MyBiz.CreateProjectInvoice(String project_id, Boolean bill_contracts, Boolean bill_callrecords, Boolean bill_materials, Boolean bill_manhours, Boolean bill_datausage) 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\App_Code\MyBiz.cs:行号 378
+18/01/2016 10:09:48 a.m.: System.UnauthorizedAccessException: 对路径“C:\Users\Brian\Desktop\Project\sapp_telco_v2_4\xml\invoice.xml”的访问被拒绝。
+   在 MyBiz.CreateProjectInvoice(String project_id, Boolean bill_contracts, Boolean bill_callrecords, Boolean bill_materials, Boolean bill_manhours, Boolean bill_datausage) 位置 c:\Users\Brian\Desktop\Project\sapp_telco_v2_4\App_Code\MyBiz.cs:行号 378

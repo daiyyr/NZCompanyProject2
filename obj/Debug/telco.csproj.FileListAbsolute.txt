@@ -1,0 +1,16 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\obj\Debug\telco.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\obj\Debug\RdlCompile.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\obj\Debug\RdlCompile.compiled
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\telco.dll.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\telco.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\telco.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\jqGridAdv.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\Microsoft.SqlServer.Types.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\Sapp.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\jqGridAdv.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\bin\Sapp.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\obj\Debug\telco.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\telco\sapp_telco_v2_4\obj\Debug\telco.pdb

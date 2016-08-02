@@ -1,0 +1,37 @@
+﻿/*stylesheet for views*/
+#view_table {
+    width: 100%;
+}
+
+table.tier2 {
+    border-width: 1px 1px 1px 1px;
+    border-spacing: 1px;
+    border-style: solid solid solid solid;
+    border-color: black black black black;
+    border-collapse: separate;
+    background-color: rgb(238, 238, 238);
+    text-align: left;
+}
+
+    table.tier2 th {
+        border-width: 1px 1px 1px 1px;
+        padding: 1px 1px 1px 1px;
+        border-style: dashed dashed dashed dashed;
+        border-color: gray gray gray gray;
+        background-color: rgb(238, 238, 238);
+        -moz-border-radius: 0px 0px 0px 0px;
+    }
+
+    table.tier2 td {
+        border-width: 1px 1px 1px 1px;
+        padding: 1px 1px 1px 1px;
+        border-style: dashed dashed dashed dashed;
+        border-color: gray gray gray gray;
+        background-color: rgb(238, 238, 238);
+        -moz-border-radius: 0px 0px 0px 0px;
+    }
+
+#dropdownlist_align_right {
+    margin-right: 18px;
+    text-align: right;
+}

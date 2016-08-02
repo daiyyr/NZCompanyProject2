@@ -1,0 +1,83 @@
+﻿/*Style for body on masterpage*/
+#masterbody
+{
+	background-color:#666666; 
+	background-image:url(~/images/lightgray1.gif); 
+	text-align:center;
+}
+/*Style for container on masterpage*/
+#container
+{
+	width:100%;
+	background-color:#666666;
+    font-family:"Tahoma"; 
+    font-size:12px;
+}
+/*Style for header on masterpage*/
+#header
+{
+	background-color:#eeeeee;
+	margin: 0 auto;
+	width:993px;
+	height:100px;
+}
+#left_logo
+{
+	width:125px;
+	height:100px;
+	float:left;clear:left;overflow:hidden;
+    vertical-align : middle; display : table-cell;
+}
+.ImageLogo
+{
+	margin: 8.5px 0 8.5px 0;
+}
+.menu_item
+{
+	text-align:left;
+}
+#middle_msg
+{
+	
+	width:668px;
+	height:100px;
+	float:left; overflow:hidden;
+}
+#right_login
+{
+	width:200px;
+	height:100px;
+	float:right;clear:right;overflow:hidden;
+}
+/*Style for main on masterpage*/
+#main
+{
+	background-color:#eeeeee;
+	margin: 0 auto;
+	width:993px;
+	height:1300px;
+}
+#menu
+{
+	background-color:#5695b5;
+	text-align:left;
+}
+#content
+{
+	
+}
+/*Style for rooter on masterpage*/
+#rooter
+{
+	background-color:#eeeeee;
+	margin: 0 auto;
+	width:993px;
+	height:50px;
+}
+/*Modal Dialog Box*/
+#mbox{background-color:#eee; padding:8px; border:2px outset #666;}
+#mbm{font-family:sans-serif;font-weight:bold;float:right;padding-bottom:5px;}
+#ol{background-image: url(images/overlay.png);}
+.dialog {display:none;}
+
+* html #ol{background-image:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/overlay.png", sizingMethod="scale");}

@@ -1,0 +1,18 @@
+﻿/*Style for clientslist*/
+#content_left {
+        padding-top: 5px;
+    padding-left: 5px;
+    width: 15%;
+    float: left;
+    clear: left;
+    margin-top: 5px;
+    text-align:center;
+}
+
+#content_right {
+    padding-top: 5px;
+    width: 80%;
+    height: 800px;
+    float: left;
+    margin-left: 5px;
+}
