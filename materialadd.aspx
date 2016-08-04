@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="materialadd.aspx.cs" Inherits="telco.materialadd" %>
 
 
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %><%@ Register Assembly="jqGridAdv" Namespace="jqGridAdv" TagPrefix="cc1" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Assembly="jqGridAdv" Namespace="jqGridAdv" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <script id="FormScript" src="js/materialadd.js" type="text/javascript"></script>
@@ -21,12 +22,12 @@
                     <tr>
                         <td>Code(*):</td>
                         <td>
-                            <asp:ComboBox ID="WebComboCode" runat="server" Editable="true" 
-                                onselectedrowchanged="WebComboCode_SelectedRowChanged">
+                            <asp:ComboBox ID="WebComboCode" runat="server" DropDownStyle="DropDown"
+                                OnSelectedIndexChanged="WebComboCode_SelectedRowChanged" AutoCompleteMode="Suggest" AutoPostBack="True">
                             </asp:ComboBox>
 
-                            <asp:CustomValidator ID="CustomValidatorCode" runat="server" 
-                                ErrorMessage="!" onservervalidate="CustomValidatorCode_ServerValidate" ></asp:CustomValidator>
+                            <%--<asp:CustomValidator ID="CustomValidatorCode" runat="server" 
+                                ErrorMessage="!" onservervalidate="CustomValidatorCode_ServerValidate" ></asp:CustomValidator>--%>
                         </td>
                         <td>Name(*):</td>
                         <td>

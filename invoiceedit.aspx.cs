@@ -449,7 +449,10 @@ namespace telco
                 #endregion
                 #region Update Invoice
                 invoice.InsertInvoice();
-                if (!datausage_id.Equals(""))
+
+                //modified by dyyr @ 20160803
+                //if (!datausage_id.Equals(""))
+                if (false)
                 {
                     datausage_id = datausage_id.Replace("datausage", "");
                     string[] ids = datausage_id.Split(',');

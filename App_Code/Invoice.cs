@@ -86,11 +86,10 @@ public class Invoice
             mydb.NonQuery(sql);
 
             sql = "INSERT INTO invoices "
-                + "(invoice_number, invoice_date, invoice_due, invoice_term, invoice_client_id, invoice_total, invoice_gst, invoice_gsttotal, invoice_paid, invoice_paidamount)"
-
+                
                 //modified by dyyr @2016 08 02
                 //         + " VALUES(" + invoice_id + ", " + invoice_number + ", " + invoice_date + ", " + invoice_due + ", '" + invoice_term + "', " + client_id + ", 0, 0, 0, 0, null)";
-                + " VALUES(" + invoice_number + ", " + invoice_date + ", " + invoice_due + ", '" + invoice_term + "', " + client_id + ", 0, 0, 0, 0, null)";
+                + " VALUES(" + invoice_id + ", " + invoice_number + ", " + invoice_date + ", " + invoice_due + ", '" + invoice_term + "', " + client_id + ", 0, 0, 0, 0, null, null)";
 
             mydb.NonQuery(sql);
 

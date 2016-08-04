@@ -15,7 +15,9 @@
                 Client:
             </div>
             <div>
-                <asp:ComboBox DropDownStyle="DropDownList" AutoCompleteMode="SuggestAppend" CaseSensitive="False" ID="WebComboClient" runat="server" Width="80px">
+                <asp:ComboBox DropDownStyle="DropDown"
+                     AutoCompleteMode="Suggest"
+                    CaseSensitive="False" ID="WebComboClient" runat="server" Width="80px">
                 </asp:ComboBox>
             </div>
             <div>

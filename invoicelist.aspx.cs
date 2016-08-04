@@ -164,7 +164,7 @@ namespace telco
                             WebComboClient.SelectedValue = fields[1];
                             sql = "SELECT invoice_id AS ID, invoice_number AS `Number`, invoice_date AS `Date`, client_name AS `Recipient`,"
                                 + " invoice_gsttotal AS Amount, invoice_paydate AS `PaidDate` ,  invoice_paidamount AS PaidAmount FROM invoices LEFT JOIN clients ON invoices.invoice_client_id=clients.client_id"
-                                + " WHERE invoices.invoice_number=" + fields[0] + " AND clients.client_id=" + fields[1];
+                                + " WHERE invoices.invoice_number=" + fields[0] + " AND clients.client_id='" + fields[1]+"'";
                         }
                         else
                         {
@@ -172,7 +172,7 @@ namespace telco
                             WebComboClient.SelectedValue = fields[1];
                             sql = "SELECT invoice_id AS ID, invoice_number AS Number, invoice_date AS `Date`, client_name AS Recipient,"
                                 + " invoice_gsttotal AS Amount, invoice_paydate AS `PaidDate` , invoice_paidamount AS PaidAmount FROM invoices LEFT JOIN clients ON invoices.invoice_client_id=clients.client_id"
-                                + " WHERE clients.client_id=" + fields[1];
+                                + " WHERE clients.client_id='" + fields[1]+"'";
                         }
                     }
 

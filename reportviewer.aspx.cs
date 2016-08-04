@@ -203,6 +203,7 @@ namespace telco
                         "FROM invoices i " +
                         "inner join clients c on i.invoice_client_id = c.client_id " +
                         "where i.invoice_date >= '" + startDate.ToString("yyyy-MM-dd") + "' and i.invoice_date < '" + endDate.ToString("yyyy-MM-dd") + "' " +
+                        clientSql +
                         "union all " +
                         "select inv.invoice_client_id, c.client_name,c.client_code,'-' invoice_number,'" + startDate.ToString("yyyy-MM-dd") + "' invoice_date,'-' invoice_due, '[Open Balance]' description, " +
                         "sum(ifnull(inv.invoice_gsttotal, 0)) invoice_gsttotal, sum(ifnull(inv.invoice_paidamount, 0)) invoice_paidamount, sum(ifnull(inv.invoice_gsttotal, 0)) - sum(ifnull(inv.invoice_paidamount, 0)) balance " +

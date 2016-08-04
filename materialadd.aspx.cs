@@ -12,6 +12,7 @@ using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using System.Data.Odbc;
 using System.Text;
+using Sapp.Common;
 
 namespace telco
 {
@@ -23,9 +24,13 @@ namespace telco
         {
             if (Request.QueryString["projectid"] != null) project_id = Server.UrlDecode(Request.QueryString["projectid"]);
             #region Javascript Setup
-            Control[] wc = { WebComboCode };
+            
             ButtonSubmit.Attributes.Add("onclick", "buttonSubmit_Click();");
+
+            
+            Control[] wc = { WebComboCode };
             RenderJSArrayWithCliendIds(wc);
+
             #endregion
             if (!Page.IsPostBack)
             {
@@ -41,15 +46,9 @@ namespace telco
                 try
                 {
                     mydb = new MySqlOdbc(constr);
-                    string sql = "SELECT product_id AS ID, product_code AS Code, product_name AS Name FROM products";
-                    OdbcDataReader dr = mydb.Reader(sql);
-                    if (dr.HasRows)
-                    {
-                        WebComboCode.DataSource = dr;
-                        WebComboCode.DataValueField = "ID";
-                        WebComboCode.DataTextField = "Code";
-                        WebComboCode.DataBind();
-                    }
+                    AjaxControlUtils.SetupComboBox(WebComboCode,
+                        "SELECT `product_id` AS `ID`, `product_code` AS `Code` FROM `products`",
+                        "ID", "Code", constr, false);
                 }
                 catch (Exception ex)
                 {
@@ -111,7 +110,7 @@ namespace telco
                     string material_price = "null";
                     string material_qty = "null";
                     if (WebComboCode.SelectedIndex > -1)
-                        material_code = WebComboCode.SelectedValue;
+                        material_code = WebComboCode.SelectedItem.ToString();
                     else
                     {
                         material_code = (string)Session["MaterialCode"];
@@ -144,41 +143,35 @@ namespace telco
             }
         }
 
-        //protected void WebComboCode_SelectedRowChanged(object sender, Infragistics.WebUI.WebCombo.SelectedRowChangedEventArgs e)
-        //{
-        //    #region Load Form
-        //    MySqlOdbc mydb = null;
-        //    try
-        //    {
-        //        mydb = new MySqlOdbc(constr);
-        //        string product_id = "";
-        //        if (WebComboCode.SelectedIndex > -1) project_id = WebComboCode.SelectedRow.Cells[0].ToString();
-        //        if (project_id != "")
-        //        {
-        //            string sql = "SELECT * FROM products WHERE product_id=" + product_id;
-        //            OdbcDataReader dr = mydb.Reader(sql);
-        //            if (dr.Read())
-        //            {
-        //                string product_name = "";
-        //                string product_price = "";
-        //                if (dr["product_name"] != DBNull.Text) product_name = dr["product_name"].ToString();
-        //                if (dr["product_price"] != DBNull.Text) product_price = dr["product_price"].ToString();
-        //                TextBoxName.Text = product_name;
-        //                if (product_price != "") WebCurrencyEditPrice.Text = Convert.ToDecimal(product_price);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Label LabelAlertBoard = (Label)Master.FindControl("LabelAlertBoard");
-        //        LabelAlertBoard.Text = ex.ToString();
-        //    }
-        //    finally
-        //    {
-        //        if (mydb != null) mydb.Close();
-        //    }
-        //    #endregion
-        //}
+        protected void WebComboCode_SelectedRowChanged(object sender, EventArgs e)
+        {
+            #region Load Form
+            MySqlOdbc mydb = null;
+            try
+            {
+                mydb = new MySqlOdbc(constr);
+                if (WebComboCode.SelectedIndex > -1 && WebComboCode.SelectedValue.Length > 0)
+                {
+                    string sql = "SELECT * FROM products WHERE product_id=" + WebComboCode.SelectedValue;
+                    OdbcDataReader dr = mydb.Reader(sql);
+                    if (dr.Read())
+                    {
+                        TextBoxName.Text = dr["product_name"].ToString(); ;
+                        WebCurrencyEditPrice.Text = Convert.ToDecimal(dr["product_price"].ToString()).ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Label LabelAlertBoard = (Label)Master.FindControl("LabelAlertBoard");
+                LabelAlertBoard.Text = ex.ToString();
+            }
+            finally
+            {
+                if (mydb != null) mydb.Close();
+            }
+            #endregion
+        }
 
         protected void ButtonCancel_Click(object sender, EventArgs e)
         {
@@ -190,9 +183,9 @@ namespace telco
 
         protected void CustomValidatorCode_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            if (WebComboCode.SelectedIndex > -1) args.IsValid = true;
-            else if ((string)Session["MaterialCode"] != "") args.IsValid = true;
-            else args.IsValid = false;
+            //if (WebComboCode.SelectedIndex > -1) args.IsValid = true;
+            //else if ((string)Session["MaterialCode"] != "") args.IsValid = true;
+            //else args.IsValid = false;
         }
 
         protected void CustomValidatorPrice_ServerValidate(object source, ServerValidateEventArgs args)

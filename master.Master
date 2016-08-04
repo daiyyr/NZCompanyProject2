@@ -234,7 +234,7 @@
 
     <form id="form1" runat="server">
 
-        <asp:ToolkitScriptManager runat="server"></asp:ToolkitScriptManager>
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
         <div id="container">
             <div id="header">
                 <div id="left_logo">
