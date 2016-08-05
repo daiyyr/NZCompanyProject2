@@ -23,7 +23,8 @@
                         <td>Code(*):</td>
                         <td>
                             <asp:ComboBox ID="WebComboCode" runat="server" DropDownStyle="DropDown"
-                                OnSelectedIndexChanged="WebComboCode_SelectedRowChanged" AutoCompleteMode="Suggest" AutoPostBack="True">
+                                OnSelectedIndexChanged="WebComboCode_SelectedRowChanged" 
+                                AutoCompleteMode="Suggest" AutoPostBack="True">
                             </asp:ComboBox>
 
                             <%--<asp:CustomValidator ID="CustomValidatorCode" runat="server" 
@@ -46,14 +47,14 @@
                     <tr>
                         <td>Price(*):</td>
                         <td>
-                            <asp:TextBox ID="WebCurrencyEditPrice" runat="server" DataMode="Decimal">
+                            <asp:TextBox ID="WebCurrencyEditPrice" runat="server" >
                             </asp:TextBox>
                             <asp:CustomValidator ID="CustomValidatorPrice" runat="server" 
                                 ErrorMessage="!" onservervalidate="CustomValidatorPrice_ServerValidate" ></asp:CustomValidator>
                         </td>
                         <td>Qty(*):</td>
                         <td>
-                            <asp:TextBox  ID="WebNumericEditQty" runat="server" DataMode="Int">
+                            <asp:TextBox  ID="WebNumericEditQty" runat="server" >
                             </asp:TextBox>
                             <asp:CustomValidator ID="CustomValidatorQty" runat="server" 
                                 ErrorMessage="!" onservervalidate="CustomValidatorQty_ServerValidate" ></asp:CustomValidator>
