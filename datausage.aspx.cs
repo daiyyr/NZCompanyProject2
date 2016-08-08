@@ -96,6 +96,8 @@ namespace telco
         {
             try
             {
+                //modified by daiyyr @20160807
+                /*
                 string sql = "select * from data_usage";
 
                 DataTable dt = new MySqlOdbc(AdFunction.conn).ReturnTable(sql, "temp");
@@ -104,7 +106,9 @@ namespace telco
                 JQGrid jqgridObj = new JQGrid(postdata, AdFunction.conn, sqlfromstr, sqlselectstr, dt);
                 string jsonStr = jqgridObj.GetJSONStr();
                 return jsonStr;
+                */
 
+                return null;
             }
             catch (Exception ex)
             {

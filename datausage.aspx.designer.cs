@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace telco {
-    
-    
-    public partial class datausage {
-        
+namespace telco
+{
+
+
+    public partial class datausage
+    {
+
         /// <summary>
         /// ImageButtonDelete control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ImageButtonDelete;
-        
+
         /// <summary>
         /// FileUpload1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-        
+
         /// <summary>
         /// DaysDL control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DaysDL;
-        
+
         /// <summary>
         /// Button1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
+
         /// <summary>
         /// StartDateT control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox StartDateT;
-        
+
         /// <summary>
         /// EndDateT control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox EndDateT;
-        
+
         /// <summary>
         /// ButtonImport control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonImport;
-        
+
         /// <summary>
         /// jqGridTable control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::jqGridAdv.jqGridAdv jqGridTable;
-        
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace telco {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
         /// Image2 control.
         /// </summary>
